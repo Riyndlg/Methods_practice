@@ -17,7 +17,7 @@ namespace PIN_code
         }
         static void ValidatePin(string pin)
         {
-            if (((pin.Length == 4) || (pin.Length == 6)) && pin.Any(char.IsLetter))
+            if (((pin.Length == 4) || (pin.Length == 6)) && (pin.Any(char.IsLetter) == false))
             {
                 Console.WriteLine("True");
             }
