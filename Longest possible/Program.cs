@@ -15,6 +15,9 @@ namespace Longest_possible
             string s2 = Console.ReadLine();
             string text = String.Concat(s1, s2);
             string result = DuplicateSymbols(text);
+            char[] temp = result.ToCharArray();
+            Array.Sort(temp);
+            result = new string(temp);
             Console.WriteLine($"Longest(s1, s2) -> {result}");
             Console.ReadKey();
         }
